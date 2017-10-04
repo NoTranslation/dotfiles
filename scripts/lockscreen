@@ -1,0 +1,10 @@
+#!/bin/bash
+ffmpeg -f x11grab -video_size 1920x1080 -y -i $DISPLAY -i /home/kermit/scripts/locked.png -filter_complex "boxblur=20:1,overlay" -vframes 1 /tmp/screenshot.png -loglevel quiet
+i3lock --textcolor=00000000 --insidecolor=00000000 --ringcolor=fafafaff --linecolor=00000000 --keyhlcolor=fabb5cff --ringvercolor=fadd5cff --separatorcolor=00000000 --insidevercolor=00000000 --insidewrongcolor=00000000 --ringwrongcolor=f13459ff -i "/tmp/screenshot.png" &
+
+if [[ $1 != '' ]]; then
+  #statements
+  sudo passwd -l kermit
+  sleep $1m
+  sudo passwd -u kermit
+fi
