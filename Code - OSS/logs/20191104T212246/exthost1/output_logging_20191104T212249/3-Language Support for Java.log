@@ -1,0 +1,366 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+[Error - 21:40:06] Request textDocument/codeAction failed.
+  Message: Internal error.
+  Code: -32603 
+java.util.concurrent.CompletionException: java.lang.NullPointerException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:314)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:319)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:645)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.jdt.ls.core.internal.corrections.proposals.NewVariableCorrectionProposal.doAddLocal(NewVariableCorrectionProposal.java:221)
+	at org.eclipse.jdt.ls.core.internal.corrections.proposals.NewVariableCorrectionProposal.getRewrite(NewVariableCorrectionProposal.java:111)
+	at org.eclipse.jdt.ls.core.internal.corrections.proposals.ASTRewriteCorrectionProposal.addEdits(ASTRewriteCorrectionProposal.java:87)
+	at org.eclipse.jdt.ls.core.internal.corrections.proposals.CUCorrectionProposal.createTextChange(CUCorrectionProposal.java:107)
+	at org.eclipse.jdt.ls.core.internal.corrections.proposals.CUCorrectionProposal.createChange(CUCorrectionProposal.java:113)
+	at org.eclipse.jdt.core.manipulation.ChangeCorrectionProposalCore.getChange(ChangeCorrectionProposalCore.java:150)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionFromProposal(CodeActionHandler.java:158)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:127)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:605)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$45(JDTLanguageServer.java:936)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+	... 6 more
+
+[Error - 22:03:39] 4 Nov 2019, 22:03:39 Problem with folding range for /Mantas-code_fcb7fef1/_/Solution2.java
+Invalid_Character_Constant
+org.eclipse.jdt.core.compiler.InvalidInputException: Invalid_Character_Constant
+	at org.eclipse.jdt.internal.core.util.PublicScanner.getNextToken(PublicScanner.java:1376)
+	at org.eclipse.jdt.ls.core.internal.handlers.FoldingRangeHandler.computeFoldingRanges(FoldingRangeHandler.java:110)
+	at org.eclipse.jdt.ls.core.internal.handlers.FoldingRangeHandler.foldingRange(FoldingRangeHandler.java:61)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$26(JDTLanguageServer.java:790)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$46(JDTLanguageServer.java:942)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
+[Error - 22:06:58] Request textDocument/codeAction failed.
+  Message: Internal error.
+  Code: -32603 
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: Invalid identifier : >Str<
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:314)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:319)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:645)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+Caused by: java.lang.IllegalArgumentException: Invalid identifier : >Str<
+	at org.eclipse.jdt.core.dom.SimpleName.setIdentifier(SimpleName.java:247)
+	at org.eclipse.jdt.core.dom.AST.newSimpleName(AST.java:2597)
+	at org.eclipse.jdt.core.dom.AST.newName(AST.java:2285)
+	at org.eclipse.jdt.core.dom.rewrite.ImportRewrite.createBaseType(ImportRewrite.java:1534)
+	at org.eclipse.jdt.core.dom.rewrite.ImportRewrite.internalAddImport(ImportRewrite.java:1589)
+	at org.eclipse.jdt.core.dom.rewrite.ImportRewrite.addImport(ImportRewrite.java:1030)
+	at org.eclipse.jdt.ls.core.internal.corrections.proposals.AssignToVariableAssistProposal.evaluateType(AssignToVariableAssistProposal.java:345)
+	at org.eclipse.jdt.ls.core.internal.corrections.proposals.AssignToVariableAssistProposal.addFieldDeclaration(AssignToVariableAssistProposal.java:325)
+	at org.eclipse.jdt.ls.core.internal.corrections.proposals.AssignToVariableAssistProposal.doAddField(AssignToVariableAssistProposal.java:236)
+	at org.eclipse.jdt.ls.core.internal.corrections.proposals.AssignToVariableAssistProposal.getRewrite(AssignToVariableAssistProposal.java:139)
+	at org.eclipse.jdt.ls.core.internal.corrections.proposals.ASTRewriteCorrectionProposal.addEdits(ASTRewriteCorrectionProposal.java:87)
+	at org.eclipse.jdt.ls.core.internal.corrections.proposals.CUCorrectionProposal.createTextChange(CUCorrectionProposal.java:107)
+	at org.eclipse.jdt.ls.core.internal.corrections.proposals.CUCorrectionProposal.createChange(CUCorrectionProposal.java:113)
+	at org.eclipse.jdt.core.manipulation.ChangeCorrectionProposalCore.getChange(ChangeCorrectionProposalCore.java:150)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionFromProposal(CodeActionHandler.java:158)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:127)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:605)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$45(JDTLanguageServer.java:936)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+	... 6 more
+
+[Error - 22:07:09] 4 Nov 2019, 22:07:09 Problem with folding range for /Mantas-code_fcb7fef1/_/Solution2.java
+Invalid_Char_In_String
+org.eclipse.jdt.core.compiler.InvalidInputException: Invalid_Char_In_String
+	at org.eclipse.jdt.internal.core.util.PublicScanner.getNextToken(PublicScanner.java:1471)
+	at org.eclipse.jdt.ls.core.internal.handlers.FoldingRangeHandler.computeFoldingRanges(FoldingRangeHandler.java:110)
+	at org.eclipse.jdt.ls.core.internal.handlers.FoldingRangeHandler.foldingRange(FoldingRangeHandler.java:61)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$26(JDTLanguageServer.java:790)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$46(JDTLanguageServer.java:942)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
+[Error - 22:07:09] 4 Nov 2019, 22:07:09 Problem with folding range for /Mantas-code_fcb7fef1/_/Solution2.java
+Invalid_Char_In_String
+org.eclipse.jdt.core.compiler.InvalidInputException: Invalid_Char_In_String
+	at org.eclipse.jdt.internal.core.util.PublicScanner.getNextToken(PublicScanner.java:1471)
+	at org.eclipse.jdt.ls.core.internal.handlers.FoldingRangeHandler.computeFoldingRanges(FoldingRangeHandler.java:110)
+	at org.eclipse.jdt.ls.core.internal.handlers.FoldingRangeHandler.foldingRange(FoldingRangeHandler.java:61)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$26(JDTLanguageServer.java:790)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$46(JDTLanguageServer.java:942)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
+[Error - 22:09:18] 4 Nov 2019, 22:09:18 Problem with folding range for /Mantas-code_fcb7fef1/_/Solution2.java
+Invalid_Character_Constant
+org.eclipse.jdt.core.compiler.InvalidInputException: Invalid_Character_Constant
+	at org.eclipse.jdt.internal.core.util.PublicScanner.getNextToken(PublicScanner.java:1376)
+	at org.eclipse.jdt.ls.core.internal.handlers.FoldingRangeHandler.computeFoldingRanges(FoldingRangeHandler.java:110)
+	at org.eclipse.jdt.ls.core.internal.handlers.FoldingRangeHandler.foldingRange(FoldingRangeHandler.java:61)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$26(JDTLanguageServer.java:790)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$46(JDTLanguageServer.java:942)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
+[Error - 22:09:32] 4 Nov 2019, 22:09:32 Problem with folding range for /Mantas-code_fcb7fef1/_/Solution2.java
+Invalid_Character_Constant
+org.eclipse.jdt.core.compiler.InvalidInputException: Invalid_Character_Constant
+	at org.eclipse.jdt.internal.core.util.PublicScanner.getNextToken(PublicScanner.java:1376)
+	at org.eclipse.jdt.ls.core.internal.handlers.FoldingRangeHandler.computeFoldingRanges(FoldingRangeHandler.java:110)
+	at org.eclipse.jdt.ls.core.internal.handlers.FoldingRangeHandler.foldingRange(FoldingRangeHandler.java:61)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$26(JDTLanguageServer.java:790)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$46(JDTLanguageServer.java:942)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
+[Error - 22:09:47] 4 Nov 2019, 22:09:47 Problem with folding range for /Mantas-code_fcb7fef1/_/Solution2.java
+Invalid_Character_Constant
+org.eclipse.jdt.core.compiler.InvalidInputException: Invalid_Character_Constant
+	at org.eclipse.jdt.internal.core.util.PublicScanner.getNextToken(PublicScanner.java:1376)
+	at org.eclipse.jdt.ls.core.internal.handlers.FoldingRangeHandler.computeFoldingRanges(FoldingRangeHandler.java:110)
+	at org.eclipse.jdt.ls.core.internal.handlers.FoldingRangeHandler.foldingRange(FoldingRangeHandler.java:61)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$26(JDTLanguageServer.java:790)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$46(JDTLanguageServer.java:942)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
+[Error - 22:22:30] 4 Nov 2019, 22:22:30 Error occured while building workspace. Details: 
+ message: Syntax error, insert ")" to complete Expression; code: 1610612976; resource: /home/zero/Documents/Mantas-code/Solution2.java; line: 44
+[Error - 22:23:53] 4 Nov 2019, 22:23:53 Problem with folding range for /Mantas-code_fcb7fef1/_/Solution2.java
+Invalid_Character_Constant
+org.eclipse.jdt.core.compiler.InvalidInputException: Invalid_Character_Constant
+	at org.eclipse.jdt.internal.core.util.PublicScanner.getNextToken(PublicScanner.java:1376)
+	at org.eclipse.jdt.ls.core.internal.handlers.FoldingRangeHandler.computeFoldingRanges(FoldingRangeHandler.java:110)
+	at org.eclipse.jdt.ls.core.internal.handlers.FoldingRangeHandler.foldingRange(FoldingRangeHandler.java:61)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$26(JDTLanguageServer.java:790)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$46(JDTLanguageServer.java:942)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
+[Error - 22:24:37] 4 Nov 2019, 22:24:37 Problem with folding range for /Mantas-code_fcb7fef1/_/Solution2.java
+Invalid_Character_Constant
+org.eclipse.jdt.core.compiler.InvalidInputException: Invalid_Character_Constant
+	at org.eclipse.jdt.internal.core.util.PublicScanner.getNextToken(PublicScanner.java:1376)
+	at org.eclipse.jdt.ls.core.internal.handlers.FoldingRangeHandler.computeFoldingRanges(FoldingRangeHandler.java:110)
+	at org.eclipse.jdt.ls.core.internal.handlers.FoldingRangeHandler.foldingRange(FoldingRangeHandler.java:61)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$26(JDTLanguageServer.java:790)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$46(JDTLanguageServer.java:942)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
+[Error - 22:33:20] 4 Nov 2019, 22:33:20 
+null
+org.eclipse.jface.text.BadLocationException
+	at org.eclipse.jface.text.TreeLineTracker.fail(TreeLineTracker.java:1054)
+	at org.eclipse.jface.text.TreeLineTracker.lineByOffset(TreeLineTracker.java:268)
+	at org.eclipse.jface.text.TreeLineTracker.getLineNumberOfOffset(TreeLineTracker.java:1122)
+	at org.eclipse.jface.text.AbstractLineTracker.getLineNumberOfOffset(AbstractLineTracker.java:155)
+	at org.eclipse.jface.text.AbstractDocument.getLineOfOffset(AbstractDocument.java:871)
+	at org.eclipse.core.internal.filebuffers.SynchronizableDocument.getLineOfOffset(SynchronizableDocument.java:334)
+	at org.eclipse.jdt.ls.core.internal.handlers.JsonRpcHelpers.toLine(JsonRpcHelpers.java:83)
+	at org.eclipse.jdt.ls.core.internal.handlers.JsonRpcHelpers.toLine(JsonRpcHelpers.java:71)
+	at org.eclipse.jdt.ls.core.internal.JDTUtils.toRange(JDTUtils.java:563)
+	at org.eclipse.jdt.ls.core.internal.TextEditConverter.visit(TextEditConverter.java:137)
+	at org.eclipse.text.edits.MultiTextEdit.accept0(MultiTextEdit.java:146)
+	at org.eclipse.text.edits.TextEdit.accept(TextEdit.java:641)
+	at org.eclipse.jdt.ls.core.internal.TextEditConverter.convert(TextEditConverter.java:61)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.convertToWorkspaceEdit(SourceAssistProcessor.java:381)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.convertToWorkspaceEditAction(SourceAssistProcessor.java:346)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getGenerateConstructorsAction(SourceAssistProcessor.java:306)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:141)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:137)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:605)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$45(JDTLanguageServer.java:936)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
+[Error - 22:33:20] 4 Nov 2019, 22:33:20 
+null
+org.eclipse.jface.text.BadLocationException
+	at org.eclipse.jface.text.TreeLineTracker.fail(TreeLineTracker.java:1054)
+	at org.eclipse.jface.text.TreeLineTracker.lineByOffset(TreeLineTracker.java:268)
+	at org.eclipse.jface.text.TreeLineTracker.getLineNumberOfOffset(TreeLineTracker.java:1122)
+	at org.eclipse.jface.text.AbstractLineTracker.getLineNumberOfOffset(AbstractLineTracker.java:155)
+	at org.eclipse.jface.text.AbstractDocument.getLineOfOffset(AbstractDocument.java:871)
+	at org.eclipse.core.internal.filebuffers.SynchronizableDocument.getLineOfOffset(SynchronizableDocument.java:334)
+	at org.eclipse.jdt.ls.core.internal.handlers.JsonRpcHelpers.toLine(JsonRpcHelpers.java:83)
+	at org.eclipse.jdt.ls.core.internal.handlers.JsonRpcHelpers.toLine(JsonRpcHelpers.java:71)
+	at org.eclipse.jdt.ls.core.internal.JDTUtils.toRange(JDTUtils.java:564)
+	at org.eclipse.jdt.ls.core.internal.TextEditConverter.visit(TextEditConverter.java:137)
+	at org.eclipse.text.edits.MultiTextEdit.accept0(MultiTextEdit.java:146)
+	at org.eclipse.text.edits.TextEdit.accept(TextEdit.java:641)
+	at org.eclipse.jdt.ls.core.internal.TextEditConverter.convert(TextEditConverter.java:61)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.convertToWorkspaceEdit(SourceAssistProcessor.java:381)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.convertToWorkspaceEditAction(SourceAssistProcessor.java:346)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getGenerateConstructorsAction(SourceAssistProcessor.java:306)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:141)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:137)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:605)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$45(JDTLanguageServer.java:936)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
+[Error - 22:33:20] 4 Nov 2019, 22:33:20 Error converting TextEdits
+End position lies outside document range
+org.eclipse.text.edits.MalformedTreeException: End position lies outside document range
+	at org.eclipse.text.edits.TextEditProcessor.checkIntegrityDo(TextEditProcessor.java:180)
+	at org.eclipse.text.edits.TextEdit.dispatchCheckIntegrity(TextEdit.java:746)
+	at org.eclipse.text.edits.TextEditProcessor.performEdits(TextEditProcessor.java:153)
+	at org.eclipse.text.edits.TextEdit.apply(TextEdit.java:714)
+	at org.eclipse.jdt.ls.core.internal.TextEditConverter.visit(TextEditConverter.java:139)
+	at org.eclipse.text.edits.MultiTextEdit.accept0(MultiTextEdit.java:146)
+	at org.eclipse.text.edits.TextEdit.accept(TextEdit.java:641)
+	at org.eclipse.jdt.ls.core.internal.TextEditConverter.convert(TextEditConverter.java:61)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.convertToWorkspaceEdit(SourceAssistProcessor.java:381)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.convertToWorkspaceEditAction(SourceAssistProcessor.java:346)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getGenerateConstructorsAction(SourceAssistProcessor.java:306)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:141)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:137)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:605)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$45(JDTLanguageServer.java:936)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
+[Error - 22:35:29] 4 Nov 2019, 22:35:29 
+null
+org.eclipse.jface.text.BadLocationException
+	at org.eclipse.jface.text.TreeLineTracker.fail(TreeLineTracker.java:1054)
+	at org.eclipse.jface.text.TreeLineTracker.lineByOffset(TreeLineTracker.java:268)
+	at org.eclipse.jface.text.TreeLineTracker.getLineNumberOfOffset(TreeLineTracker.java:1122)
+	at org.eclipse.jface.text.AbstractLineTracker.getLineNumberOfOffset(AbstractLineTracker.java:155)
+	at org.eclipse.jface.text.AbstractDocument.getLineOfOffset(AbstractDocument.java:871)
+	at org.eclipse.core.internal.filebuffers.SynchronizableDocument.getLineOfOffset(SynchronizableDocument.java:334)
+	at org.eclipse.jdt.ls.core.internal.handlers.JsonRpcHelpers.toLine(JsonRpcHelpers.java:83)
+	at org.eclipse.jdt.ls.core.internal.handlers.JsonRpcHelpers.toLine(JsonRpcHelpers.java:71)
+	at org.eclipse.jdt.ls.core.internal.JDTUtils.toRange(JDTUtils.java:563)
+	at org.eclipse.jdt.ls.core.internal.TextEditConverter.visit(TextEditConverter.java:137)
+	at org.eclipse.text.edits.MultiTextEdit.accept0(MultiTextEdit.java:146)
+	at org.eclipse.text.edits.TextEdit.accept(TextEdit.java:641)
+	at org.eclipse.jdt.ls.core.internal.TextEditConverter.convert(TextEditConverter.java:61)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.convertToWorkspaceEdit(SourceAssistProcessor.java:381)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.convertToWorkspaceEditAction(SourceAssistProcessor.java:346)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:134)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:137)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:605)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$45(JDTLanguageServer.java:936)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
+[Error - 22:35:29] 4 Nov 2019, 22:35:29 
+null
+org.eclipse.jface.text.BadLocationException
+	at org.eclipse.jface.text.TreeLineTracker.fail(TreeLineTracker.java:1054)
+	at org.eclipse.jface.text.TreeLineTracker.lineByOffset(TreeLineTracker.java:268)
+	at org.eclipse.jface.text.TreeLineTracker.getLineNumberOfOffset(TreeLineTracker.java:1122)
+	at org.eclipse.jface.text.AbstractLineTracker.getLineNumberOfOffset(AbstractLineTracker.java:155)
+	at org.eclipse.jface.text.AbstractDocument.getLineOfOffset(AbstractDocument.java:871)
+	at org.eclipse.core.internal.filebuffers.SynchronizableDocument.getLineOfOffset(SynchronizableDocument.java:334)
+	at org.eclipse.jdt.ls.core.internal.handlers.JsonRpcHelpers.toLine(JsonRpcHelpers.java:83)
+	at org.eclipse.jdt.ls.core.internal.handlers.JsonRpcHelpers.toLine(JsonRpcHelpers.java:71)
+	at org.eclipse.jdt.ls.core.internal.JDTUtils.toRange(JDTUtils.java:564)
+	at org.eclipse.jdt.ls.core.internal.TextEditConverter.visit(TextEditConverter.java:137)
+	at org.eclipse.text.edits.MultiTextEdit.accept0(MultiTextEdit.java:146)
+	at org.eclipse.text.edits.TextEdit.accept(TextEdit.java:641)
+	at org.eclipse.jdt.ls.core.internal.TextEditConverter.convert(TextEditConverter.java:61)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.convertToWorkspaceEdit(SourceAssistProcessor.java:381)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.convertToWorkspaceEditAction(SourceAssistProcessor.java:346)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:134)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:137)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:605)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$45(JDTLanguageServer.java:936)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
+[Error - 22:35:29] 4 Nov 2019, 22:35:29 Error converting TextEdits
+End position lies outside document range
+org.eclipse.text.edits.MalformedTreeException: End position lies outside document range
+	at org.eclipse.text.edits.TextEditProcessor.checkIntegrityDo(TextEditProcessor.java:180)
+	at org.eclipse.text.edits.TextEdit.dispatchCheckIntegrity(TextEdit.java:746)
+	at org.eclipse.text.edits.TextEditProcessor.performEdits(TextEditProcessor.java:153)
+	at org.eclipse.text.edits.TextEdit.apply(TextEdit.java:714)
+	at org.eclipse.jdt.ls.core.internal.TextEditConverter.visit(TextEditConverter.java:139)
+	at org.eclipse.text.edits.MultiTextEdit.accept0(MultiTextEdit.java:146)
+	at org.eclipse.text.edits.TextEdit.accept(TextEdit.java:641)
+	at org.eclipse.jdt.ls.core.internal.TextEditConverter.convert(TextEditConverter.java:61)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.convertToWorkspaceEdit(SourceAssistProcessor.java:381)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.convertToWorkspaceEditAction(SourceAssistProcessor.java:346)
+	at org.eclipse.jdt.ls.core.internal.text.correction.SourceAssistProcessor.getSourceActionCommands(SourceAssistProcessor.java:134)
+	at org.eclipse.jdt.ls.core.internal.handlers.CodeActionHandler.getCodeActionCommands(CodeActionHandler.java:137)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$14(JDTLanguageServer.java:605)
+	at org.eclipse.jdt.ls.core.internal.handlers.JDTLanguageServer.lambda$45(JDTLanguageServer.java:936)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:642)
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
